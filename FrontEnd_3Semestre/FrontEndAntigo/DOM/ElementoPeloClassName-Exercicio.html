@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .corsim {
+            color: green;
+        }
+        .cornao {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="fruta" placeholder="Digite o nome da fruta">
+    <select name="" id="nomeClasse">
+        <option value="">Selecione</option>
+        <option value="corsim">corsim</option>
+        <option value="cornao">cornao</option>
+    </select>
+    <button onclick="cadastrarFruta()" type="button">Cadastrar</button>
+
+    <ul id="ListaFrutas">
+        <li class="corsim">Amora</li>
+        <li class="cornao">Banana</li>
+    </ul>
+
+    <script>
+        function cadastrarFruta() {
+            const Fruta = document.getElementById("fruta").value;
+            const nomeClasse = document.getElementById("nomeClasse").value;
+            const ListaFrutas = document.getElementById("ListaFrutas");
+
+            console.log(Fruta);
+            console.log(nomeClasse);
+            console.log(ListaFrutas);
+
+            if(Fruta.trim().length === 0 || nomeClasse.trim().length === 0){
+                alert("Preencha os campos para cadastrar a fruta");
+                return false;
+            }
+            
+            //cadastrar a fruta na lista
+            /*forma 1*/ListaFrutas.innerHTML += `<li class="${nomeClasse}">${Fruta}</li>`;
+
+            /*forma 2
+            const novaFruta = document.createElement("li");
+            novaFruta.textContent = Fruta;
+            novaFruta.className = nomeClasse;
+            document.getElementById("ListaFrutas").appendChild(novaFruta);
+            */
+
+            //limpar os campos
+            document.getElementById("fruta").value = "";
+            document.getElementById("nomeClasse").value = "";
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+.mae{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(210, 210, 210);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    }
+
+.mae__filho{
+    color: black;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    transition: text-decoration .4s;
+}
+
+
+.mae__filho:hover{
+    text-decoration: underline;
+}
+
+
+.mae__filho--button-default{
+    padding: 3px 5px;
+    border-radius: 3px;
+
+
+    border: 1px dotted black;
+}
+
+
+.mae__filho--success{
+    color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: rgb(159, 237, 126);
+    border: 1px solid black;
+}
+
+

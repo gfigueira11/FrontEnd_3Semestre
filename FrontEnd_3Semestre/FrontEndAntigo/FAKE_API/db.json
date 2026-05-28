@@ -1,0 +1,109 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "Nome": "Francisco Hugo",
+      "idade": 18,
+      "Email": "Hugo@gmail.com"
+    },
+    {
+      "id": "2",
+      "Nome": "Walyson Menezes",
+      "idade": 17,
+      "Email": "waly@gmail.com"
+    },
+    {
+      "id": "23E-obnqH_w",
+      "Nome": "Gabriel figueira",
+      "idade": 17,
+      "Email": "fifi@gmail.com"
+    },
+    {
+      "id": "7Z0cA-6IVpU",
+      "Nome": "Davi Muniz",
+      "idade": 17,
+      "Email": "Davi@gmail.com"
+    },
+    {
+      "id": "pViRpTViDlE"
+    }
+  ],
+  "Posts": [
+    {
+      "id": "1",
+      "texto": "Qualuquer coisa",
+      "imagem": "https://m.media-amazon.com/images/I/61Fd1eEa7OL._SL1087_.jpg",
+      "qtdCurtidas": 0
+    },
+    {
+      "id": "cgNDciEokCE",
+      "texto": "Sempre lindo",
+      "imagem": "https://media.istockphoto.com/id/125141451/pt/foto/caixa-de-%C3%B3culos-estudante-dando-uma-flor.jpg?s=612x612&w=0&k=20&c=OOkqhbdvSnOaouFkqbRDdx-IAspwU9AZc-nVUH3_EPQ=",
+      "qtdCurtidas": 10
+    },
+    {
+      "id": "YnnxjCo9wfQ"
+    }
+  ],
+  "frutas": [],
+  "jogos": [],
+  "imc": [
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "IMC": 30.477966223242138,
+      "situacao": "Obesidade Grau I",
+      "id": "te51RMVk9Ww"
+    },
+    {
+      "nome": "Walyson",
+      "altura": 1.8,
+      "peso": 70,
+      "IMC": 21.604938271604937,
+      "situacao": "Saudável",
+      "id": "3ctCBn2Bcts"
+    },
+    {
+      "nome": "Gustavo",
+      "altura": 1.5,
+      "peso": 30,
+      "IMC": 13.333333333333334,
+      "situacao": "Magreza grave",
+      "id": "seQD7UofiVA"
+    },
+    {
+      "nome": "Gabriel",
+      "altura": 1.9,
+      "peso": 40,
+      "IMC": 11.0803324099723,
+      "situacao": "Magreza grave",
+      "id": "NDnx86Ha0Mk"
+    },
+    {
+      "nome": "hugo",
+      "altura": 1.77,
+      "peso": 65,
+      "IMC": 20.747550193111813,
+      "situacao": "Saudável",
+      "id": "IrziUjSYzTk"
+    }
+  ],
+  "calculadora": [
+    {
+      "n1": 5,
+      "n2": 5,
+      "op": "soma",
+      "resultado": "10.00",
+      "id": "DE_Ady5z6ec"
+    },
+    {
+      "n1": 60,
+      "n2": 7,
+      "op": "soma",
+      "resultado": "67.00",
+      "id": "uNDGt2HreQs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

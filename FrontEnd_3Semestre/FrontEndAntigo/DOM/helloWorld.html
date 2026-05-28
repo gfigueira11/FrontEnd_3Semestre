@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function saudacao() {
+            alert(`Título: ${document.getElementById("titulo").innerText}`);
+        }
+
+        function mouseMoveu(){
+            alert("Mouse se moveu no botão");
+        }
+
+        function clicouBaixo(){
+            alert("Mouse clicou no botão");
+        }
+
+        function clicouSubiu(){
+            alert("Mouse soltou o botão");
+        }
+
+        function clicouDuasVezes(){
+            alert("Mouse clicou duas vezes no botão");
+        }
+    </script>
+</head>
+<body>
+<h1 id="titulo">Olá, eu sou o título da página</h1>
+<button onclick="saudacao()">Clique aqui</button>
+<button onmousemove="mouseMoveu()">Passe o mouse</button>
+<button onmousedown="clicouBaixo()">Segura o click</button>
+<button onmouseup="clicouSubiu()">Solte o click</button>
+<button ondblclick="clicouDuasVezes()">Clique duas vezes</button>
+</body>
+</html>

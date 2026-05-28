@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "id": "1",
+      "nome": "Gabriel",
+      "sobrenome": "Figueira"
+    },
+    {
+      "nome": "Gustavo",
+      "sobrenome": "Augusto",
+      "id": "VCQawe0MpI4"
+    },
+    {
+      "nome": "Davi",
+      "sobrenome": "Duarte",
+      "id": "QKywHCGhDZ4"
+    },
+    {
+      "nome": "Paulo",
+      "sobrenome": "Andre",
+      "id": "u-7JDKzqCHM"
+    },
+    {
+      "nome": "dsad",
+      "sobrenome": "sa",
+      "id": "vwpb_gNtNKs"
+    },
+    {
+      "nome": "Francisco",
+      "sobrenome": "Hugo",
+      "id": "gY6HEiCABfQ"
+    },
+    {
+      "email": "matheus@gmail.com",
+      "telefone": "12345678",
+      "numero": "99999-9999",
+      "ddd": "11",
+      "apto": "apto 134 Bromelia",
+      "complemento": "Predio",
+      "rua": "Rua Yayá",
+      "cep": "09941445",
+      "anotacoes": "xx",
+      "bairro": "Canhema",
+      "cidade": "Diadema",
+      "numerocasa": "206",
+      "nome": "Matheus",
+      "sobrenome": "Felix",
+      "id": "lihKRAMLfxg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,17 @@
+.jogo-card{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    padding: 15px;
+    margin: 10px;
+
+    width: 250px;
+
+    background-color: #f5f5f5;
+}
+
+.jogo-imagem{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
