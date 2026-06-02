@@ -89,13 +89,16 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-
+var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("CorsPolicy", builder =>
-    {
-        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-    });
+    options.AddPolicy(name: myAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:5173") // Your frontend URL
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                      });
 });
 
 
@@ -116,7 +119,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
-
+app.UseCors(myAllowSpecificOrigins);
 app.UseAuthentication();
 
 app.UseAuthorization();

@@ -9,6 +9,8 @@ import Botao from "../botao/Botao";
   
 
 const Cadastro = (props) => {
+    console.log(props.btnEditar);
+    
     return (
         <section className="section_cadastro">
             <form onSubmit={props.funcCadastro} className="layout_grid form_cadastro">
@@ -17,34 +19,29 @@ const Cadastro = (props) => {
                 <div className="campos_cadastro">
                     <div className="campo_cad_nome">
                         <label htmlFor="nome">Nome</label>
-                        <input type="text" name="nome" placeholder={`Digite o nome do ${props.placeholder}`} 
-                        //O valor do input vem de props (estado do componente pai)
-                        value={props.valor}
-                        // Atualiza o estado do pai ao digitar
-                        onChange={(e) => props.setValor(e.target.value)}
-                        />
+                        <input type="text" name="nome" value={props.valor} placeholder={`Digite o nome do ${props.placeholder}`} onChange={(e) => props.setValor(e.target.value)}/>
                     </div>
-                    <div className="campo_cad_genero" style={{ display: props.visibilidade }}>
+                   <div className="campo_cad_genero" style={{ display: props.visibilidade }}>
                         <label htmlFor="genero">Gênero</label>
-                        <select name="genero" id="genero">
+                        <select value={props.genero} onChange={(e) => props.setGenero(e.target.value)} name="genero" id="">
                             <option value="">Selecione</option>
-                            {props.listaGeneros.map((genero) => {
-
-                                return (
-                                <option value={genero.id}>{genero.nome}</option>
-                                )  
-                            })}
+                        {props.listaGeneros && props.listaGeneros.length > 0 ? (
+                            props.listaGeneros.map((item) => {
+                                return <option key={item.idGenero} value={item.idGenero}>{item.nome}</option>;
+                            })) : (<></>)
+                        }
                         </select>
                     </div>
 
 
-                    {/* Botão Editar tem que ser do tipo button*/}
                     {props.btnEditar && 
-                        <Botao 
-                        nomeDoBotao="Cancelar" 
-                        cancelarEdicao={props.cancelarEdicao}
-                        btnEditar={props.btnEditar} 
-                        />}
+                    <Botao nomeDoBotao="Cancelar" 
+                    cancelarEdicao={props.cancelarEdicao}
+                    btnEditar={props.btnEditar}/>}
+                    <div className={`campo_cad_genero campo_cad_genero--${props.temadatela}`} style={{ display: props.visibilidade }}>
+                        <label htmlFor="imagem" className={`label_image label_image--${props.temadatela}`}> Selecionar Imagem </label>
+                        <input className={`input_image input_image--${props.temadatela}`} type="file" id="imagem" onChange={(e) => props.setImagem(e.target.files[0])} style={ {display: "none"} }/>
+                    </div>
                     <Botao nomeDoBotao="Cadastrar" />
                 </div>
             </form>
