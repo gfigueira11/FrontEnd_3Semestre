@@ -7,19 +7,45 @@ import Produto from './componentes/produto/Produto'
 import CadastrarProduto from './componentes/CadastroProduto/CadastroProduto'
 import ListarProduto from './componentes/Listaproduto/ListaProduto'
 import { useState } from 'react'
+import PrivateRoute from './routes/PrivateRoutes'
 
 function App() {
 
   return (
     <BrowserRouter>
-    <Header />
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/perfil' element={<Perfil />} />
-      <Route path='/produto' element={<Produto />} />
-      <Route path='/cadastrar-produto' element={<CadastrarProduto />} />
-      <Route path='/listar-produto' element={<ListarProduto />} />
-    </Routes>
+      <Header />
+      <Routes>
+        {/* Rotas Publicas */}
+        <Route path='/' element={<Home />} />
+        <Route path='/perfil' element={<Perfil />} />
+
+        {/* Rotas Privadas */}
+        <Route path='/produto'
+          element=
+          {<PrivateRoute>
+            <Produto />
+          </PrivateRoute>
+
+          } />
+
+
+        <Route path='/cadastrar-produto'
+          element={
+            <PrivateRoute>
+              <CadastrarProduto />
+            </PrivateRoute>
+
+          } />
+
+
+        <Route path='/listar-produto'
+          element={
+            <PrivateRoute>
+              <ListarProduto />
+            </PrivateRoute>
+          } />
+
+      </Routes>
     </BrowserRouter>
   )
 }

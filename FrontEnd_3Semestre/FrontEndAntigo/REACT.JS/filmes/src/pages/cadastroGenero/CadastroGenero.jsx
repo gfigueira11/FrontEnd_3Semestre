@@ -64,7 +64,6 @@ const cadastrarGenero = async (e) => {
             confirmButtonText: "OK"
         })
         // alert("Houve algum problema ao cadastrar!")
-        
      }
 
 
@@ -76,7 +75,7 @@ const cadastrarGenero = async (e) => {
             icon:"error",
             confirmButtonText: "OK"
         })
-        console.log(error)
+        
     }
     
 }

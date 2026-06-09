@@ -2,11 +2,11 @@ import { useContext } from "react";
 import { ProdutoContext } from "../../context/ProdutoContext";
 
 const ListarProduto = () => {
-    const {listarProduto} = useContext(ProdutoContext)
+    const {listaProduto} = useContext(ProdutoContext)
     return (
         <>
         <h2>Pagina de Listar Produto</h2>
-        {listarProduto.map((item) => {
+        {listaProduto.map((item) => {
             return (
                 <p>{item}</p>
             )

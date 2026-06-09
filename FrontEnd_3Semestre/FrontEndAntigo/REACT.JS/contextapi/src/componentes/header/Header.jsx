@@ -4,7 +4,12 @@ import { UsuarioContext } from "../../context/UsuarioContext"
 import { ProdutoContext } from "../../context/ProdutoContext"
 
 const Header = () => {
-    const {usuario} = useContext(UsuarioContext)
+    const { usuario, setUsuario } = useContext(UsuarioContext)
+
+    const logout = () => {
+        localStorage.removeItem("usuario")
+        setUsuario(null)
+    }
 
     return (
         <header>
@@ -15,9 +20,18 @@ const Header = () => {
                 <Link to="/cadastrar-produto">Cadastrar Produto</Link> {""}
                 <Link to="/listar-produto">Listar Produto</Link>
             </nav>
-            <h2>Bem-vindo, {usuario}</h2>
+            <h2>Bem-vindo, {usuario ? usuario : "Visitante"}
+                <button
+                    onClick={
+                        () => {
+                            logout()
+                        }
+                    }
+
+                >Sair</button>
+            </h2>
         </header>
-        
+
     )
 }
 

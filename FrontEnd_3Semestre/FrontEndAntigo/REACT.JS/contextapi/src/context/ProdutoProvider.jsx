@@ -2,13 +2,13 @@ import { useState } from "react";
 import { ProdutoContext } from "./ProdutoContext";
 
 export const ProdutoProvider = ({ children }) => {
-    const [listarProduto, setListarProduto] = useState([]);
+    const [listaProduto, setListaProduto] = useState([]);
 
     return (
         <ProdutoContext.Provider
             value={{
-                listarProduto,
-                setListarProduto
+                listaProduto,
+                setListaProduto
             }}
         >
             {children}
